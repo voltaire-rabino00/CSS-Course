@@ -8,3 +8,12 @@ Pseudo class like:
 -focus
 -link
 -visited
+
+
+<!-- How do Background Image Size, Repeat, Position, and Attachment Work? -->
+-background-size
+-background-repeat
+-background-position
+-background-attachment
+
+<!-- Background linear Gradient -->
