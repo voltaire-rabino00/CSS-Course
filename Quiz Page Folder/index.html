@@ -24,21 +24,34 @@
     </header>
 
     <main>
-       <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+        <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
 
-        <section role="region" aria-labelledby="student-info">
-            <h2 id="student-info">Student Info</h2>
-            <dv class="info"></dv>
-            <dv class="info"></dv>
-            <dv class="info"></dv>
-        </section>
-        <section role="region" aria-labelledby="html-questions">
-            <h2 id="html-questions">HTML</h2>
-        </section>
-        <section role="region" aria-labelledby="css-questions">
-            <h2 id="css-questions">CSS</h2>
-        </section>
-       </form>
+            <section role="region" aria-labelledby="student-info">
+                <h2 id="student-info">Student Info</h2>
+                <div class="info">
+                    <label for="student-name">Name</label>
+                    <input type="text" id="student-name" name="student-name" placeholder="Enter your name">
+                </div>
+                <div class="info">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="info">
+                    <label for="date-of-birth">Date of Birth</label>
+                    <input type="date" name="date-of-birth" id="date-of-birth">
+                </div>
+            </section>
+
+            <section role="region" aria-labelledby="html-questions">
+                <h2 id="html-questions">HTML</h2>
+                <div class="question-block"></div>
+                <div class="question-block"></div>
+                <div class="question-block"></div>
+            </section>
+            <section role="region" aria-labelledby="css-questions">
+                <h2 id="css-questions">CSS</h2>
+            </section>
+        </form>
     </main>
 
 
