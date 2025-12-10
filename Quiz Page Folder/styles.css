@@ -99,6 +99,15 @@ input {
     font-size: 15px;
 }
 
+.info input,
+.info label {
+  display: inline-block;
+}
+
+.info label {
+  text-align: right;
+}
+
 .info input {
     width:  50%;
     text-align: left;
