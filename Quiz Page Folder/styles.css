@@ -18,11 +18,24 @@ header {
     height: 50px;
     background-color: #1b1b32;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 h1 {
     color: #f1be32;
     font-size: min(5vw, 1.2em);
+}
+
+main {
+    padding-top: 25px;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto 10px auto;
+  max-width: 600px;
 }
 
 nav {
@@ -33,7 +46,12 @@ nav {
 
 nav > ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
 }
 
 nav li {
@@ -43,13 +61,52 @@ nav li {
     display: block;
 }
 
+li > a {
+    text-decoration: none;
+}
+
+nav > ul > li:hover {
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+}
+
+li > a {
+    color: #fff;
+}
+
 h1, h2 {
     font-family: Verdana, sans-serif;
 }
 
 h2 {
     border-bottom: 4px solid #dfdfe2;
+    margin-top: 0;
+    padding-top: 60px;
 
+}
+
+.info {
+    padding: 1px 0 0 1px;
+}
+
+.formrow {
+    margin-top: 1px;
+    padding: 0 1px;
+}
+
+input {
+    font-size: 15px;
+}
+
+.info input {
+    width:  50%;
+    text-align: left;
+}
+
+.info label {
+    width: 10%;
+    min-width: 55px;
 }
 
 .sr-only {
