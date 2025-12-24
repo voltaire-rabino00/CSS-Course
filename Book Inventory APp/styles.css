@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100vw;
+    border-collapse: collapse;
+}
+
+td, th {
+    text-align: center;
+    padding: .4em;
+}
+
+span {
+    display: inline-block;
+}
+
+thead {
+    background-image: linear-gradient(hsl(197 92% 77% / .6), hsl(197 92% 50% / .6));
+}
+
+tr.read {
+    background-image: linear-gradient(hsl(120 100% 85% / .6), hsl(120 100% 65% / .6));
+}
+
+tr.to-read {
+    background-image: linear-gradient(hsl(120 20% 95% / .6), hsl(120 20% 75% / .6));
+}
+
+tr.in-progress {
+    background-image: linear-gradient(hsl(40 100% 85% / .6), hsl(40 100% 65% / .6));
+}
+
+.status {
+    height: 1.85em;
+    width: 7em;
+    padding: .3em;
+}
+
+tr.read .status {
+    border: .1em solid hsl(120 75% 45%);
+    background-image: linear-gradient(hsl(120 75% 75%), hsl(120 75% 50%));
+}
+
+tr.to-read .status {
+    border: .1em solid hsl(5 100% 45%);
+    background-image: linear-gradient(hsl(5 100% 75%), hsl(5 100% 50%));
+}
+
+tr.in-progress .status {
+    border: .1em solid hsl(40 90% 40%);
+    background-image: linear-gradient(hsl(40 90% 75%), hsl(40 90% 50%));
+}
+
+span[class^="rate"] {
+    height: 1.85em;
+    width: 7em;
+    padding: .3em;
+}
+
+span[class^="rate"] > span {
+    width: 20%;
+    height: 100%;
+    margin: .1em;
+    border-radius: 50%;
+    border: .1em solid hsl(0 0% 50%);
+    background-color: hsl(0 15% 95%);
+}
+
+.rate.one > span:first-child {
+    background-image: linear-gradient(hsl(50 100% 70%), hsl(50 100% 50%));
+}
+
+.rate.two > span:nth-child(-n+2) {
+    background-image: linear-gradient(hsl(50 100% 70%), hsl(50 100% 50%));
+}
+
+.rate.three > span {
+    background-image: linear-gradient(hsl(50 100% 70%), hsl(50 100% 50%));
+}
