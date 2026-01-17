@@ -120,3 +120,35 @@
     font-weight: bold;
     font-size: 18px;
 }
+
+/* Features Section */
+#features {
+    padding-top: 50px;
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    color: orange;
+    font-size: 40px;
+}
+
+.desc {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
