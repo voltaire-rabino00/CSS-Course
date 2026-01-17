@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f8f8;
+    
+
+}
+
+/* --- TABLET VIEW (768px pababa) --- */
+@media (max-width: 768px) {
+    #header {
+        padding: 15px 20px; /* Bawasan ang padding sa gilid */
+    }
+
+    #header-img {
+        width: 200px; /* Liitan nang konti ang logo */
+    }
+
+    .nav-link {
+        padding: 10px 15px; /* Mas maliit na gap sa links */
+    }
+}
+
+/* --- MOBILE VIEW (600px pababa) --- */
+@media (max-width: 600px) {
+    /* 1. Header: Gawing vertical ang Logo at Nav */
+    #header {
+        flex-direction: column; 
+        gap: 15px;
+        padding: 20px;
+    }
+
+    /* 2. Nav Links: Pagpatung-patungin o gawing mas compact */
+    #nav-bar ul {
+        flex-direction: column; /* Gawing list pababa ang links */
+        text-align: center;
+        gap: 10px;
+    }
+
+    #nav-bar ul li {
+        width: 100%; /* Para mas madaling pindutin sa mobile */
+    }
+
+    /* 3. Form: Lakihan ang input field para sakop ang width */
+    #form h2 {
+        font-size: 1.5rem; /* Liitan ang font size ng title */
+    }
+
+    #email {
+        width: 90%; /* Halos full width sa mobile */
+        max-width: none;
+    }
+
+    button {
+        width: 90%; /* Full width button para madaling ma-tap */
+    }
+}
+
+/* Header Container  */
+#header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;         
+    padding: 20px 5%;
+    background-color: #f8f8f8;
+    position: sticky;               
+    top: 0;
+    margin-bottom: 10px;
+}
+
+/* 2. Styling sa Logo */
+#header-img {
+    width: 250px; /* Ayusin ang laki ng logo */
+}
+
+/* 3. Navigation List  */
+#nav-bar ul {
+    display: flex;                  
+    list-style: none;   
+    margin: 0;
+    padding: 0;
+}
+
+/* 4. Navigation Links */
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: orange;                  
+}
+
+/* Form section */
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    padding: 50px 20px;
+}
+
+#email {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+}
+
+#submit {
+    width: auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
