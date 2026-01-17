@@ -2,57 +2,54 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     background-color: #f8f8f8;
-    
-
+    scroll-behavior: smooth;
 }
+
 
 /* --- TABLET VIEW (768px pababa) --- */
 @media (max-width: 768px) {
     #header {
-        padding: 15px 20px; /* Bawasan ang padding sa gilid */
+        padding: 15px 20px; 
     }
 
     #header-img {
-        width: 200px; /* Liitan nang konti ang logo */
+        width: 200px; 
     }
 
     .nav-link {
-        padding: 10px 15px; /* Mas maliit na gap sa links */
+        padding: 10px 15px; 
     }
 }
 
 /* --- MOBILE VIEW (600px pababa) --- */
 @media (max-width: 600px) {
-    /* 1. Header: Gawing vertical ang Logo at Nav */
     #header {
         flex-direction: column; 
         gap: 15px;
         padding: 20px;
     }
 
-    /* 2. Nav Links: Pagpatung-patungin o gawing mas compact */
     #nav-bar ul {
-        flex-direction: column; /* Gawing list pababa ang links */
+        flex-direction: column;
         text-align: center;
         gap: 10px;
     }
 
     #nav-bar ul li {
-        width: 100%; /* Para mas madaling pindutin sa mobile */
+        width: 100%; 
     }
 
-    /* 3. Form: Lakihan ang input field para sakop ang width */
     #form h2 {
-        font-size: 1.5rem; /* Liitan ang font size ng title */
+        font-size: 1.5rem;
     }
 
     #email {
-        width: 90%; /* Halos full width sa mobile */
+        width: 90%; 
         max-width: none;
     }
 
     button {
-        width: 90%; /* Full width button para madaling ma-tap */
+        width: 90%; 
     }
 }
 
@@ -151,4 +148,118 @@
     flex-direction: column;
     justify-content: center;
     padding: 10px;
+}
+
+/* How it Works section */
+
+#how-it-works {
+    display: flex;
+    justify-content: center;
+    max-width: 560px;
+    margin: 60px auto;
+    padding-top: 10px;
+}
+
+#video {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16/ 9;
+}
+
+/* Pricing Section */
+#pricing {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px); /* Konting angat pag tinapatan ng mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-header, .product-title {
+    background-color: #c7c5c5;
+    padding: 2px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-description {
+    list-style: none;       
+    padding: 0;
+    margin-bottom: 20px;
+    line-height: 2;         
+}
+
+.select {
+    background-color: orange;
+    width: auto;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    margin: 15px;
+    text-transform: uppercase;
+}
+
+
+/* Footer Section */
+footer #footer-nav-bar, 
+footer nav, 
+footer ul, 
+footer li {
+    background-color: rgba(0,0,0,0); /* Force transparency */
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+footer {
+    background-color: #eee; /* Balik natin sa gray para professional */
+    padding: 30px 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin-bottom: 5px;
+    background: transparent; /* Siguradong transparent ang UL */
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: black;
+    background: transparent; /* Siguradong transparent ang Link */
+}
+
+footer p {
+    background: transparent; /* Siguradong transparent ang Copyright text */
+    font-size: 0.9rem;
 }
