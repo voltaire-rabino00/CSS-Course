@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    height: 100vh;
+    /* Ginawang vh para sa vertical height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505;
+    /* Ginawa nating space ang background */
+}
+
+.space {
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    /* Medyo pinaliit para balance */
+    height: 100px;
+    background-color: #2e86de;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(46, 134, 222, 0.5);
+    /* May kaunting glow */
+    z-index: 2;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    /* Sukat ng ikot */
+    height: 200px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    /* Guide line ng orbit */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    /* Sentro sa screen */
+    animation: orbit 5s linear infinite;
+}
+
+.moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.2);
+    /* Para mukhang sphere */
+}
+
+@keyframes orbit {
+
+    0% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}
