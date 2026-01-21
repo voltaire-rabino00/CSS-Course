@@ -1,5 +1,7 @@
 :root {
     --penguin-face: white;
+    --penguin-picorna: orange;
+    --penguin-skin: gray;
 }
 
 body {
@@ -59,7 +61,7 @@ body {
     width: 50%;
     height: 45%;
     background: linear-gradient(45deg,
-            gray,
+            var(--penguin-skin),
             rgb(239, 240, 228));
     border-radius: 70% 70% 65% 65%;
     top: 10%;
@@ -118,12 +120,12 @@ body {
 }
 
 .blush {
-  width: 15%;
-  height: 10%;
-  background-color: pink;
+    width: 15%;
+    height: 10%;
     background-color: pink;
-  top: 65%;
-  border-radius: 50%;
+    background-color: pink;
+    top: 65%;
+    border-radius: 50%;
 }
 
 .blush.left {
@@ -135,28 +137,37 @@ body {
 }
 
 .beak {
-  height: 10%;
-  background-color: orange;
-  border-radius: 50%;
+    height: 10%;
+    background-color: var(--penguin-picorna);
+    border-radius: 50%;
 }
 
 .beak.top {
-  width: 20%;
-  top: 60%;
-  left: 40%;
+    width: 20%;
+    top: 60%;
+    left: 40%;
 }
 
 
 .beak.bottom {
-  width: 16%;
-  top: 65%;
-  left: 42%;
+    width: 16%;
+    top: 65%;
+    left: 42%;
 }
 
 .shirt {
-  font-size: 25px;
-  font-family: 'Helvetica', sans-serif;
-  font-weight: bold;
+    font: bold 25px Helvetica, sans-serif;
+    top: 165px;
+    left: 127.5px;
+    z-index: 1;
+    color: #6a6969;
+
+}
+
+.shirt div {
+    font-weight: initial;
+    top: 22.5px;
+    left: 12px;
 }
 
 .penguin-body {
@@ -176,11 +187,55 @@ body {
     position: absolute;
     width: 50%;
     height: 45%;
-    background-color: gray;
+    background-color: var(--penguin-skin);
     top: 10%;
     left: 25%;
     border-radius: 0% 0% 100% 100%;
     opacity: 70%;
+}
+
+.arm {
+    width: 30%;
+    height: 60%;
+    background: linear-gradient(
+        90deg,
+        var(--penguin-skin),
+        rgb(209, 210, 199)
+    );
+}
+
+.arm.left {
+  top: 35%;
+  left: 5%;
+  transform-origin: top left;
+  transform: rotate(130deg) scaleX(-1); 
+}
+
+.arm.right {
+  top: 0%;
+  right: -5%;
+  transform: rotate(-45deg);
+}
+
+.foot {
+  width: 15%;
+  height: 30%;
+  background-color: var(--penguin-picorna);
+  top: 85%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.foot.left {
+  left: 25%;
+  transform: rotate(80deg);
+
+}
+
+.foot.right {
+  right: 25%;
+  transform: rotate(-80deg);
+
 }
 
 .ground {
